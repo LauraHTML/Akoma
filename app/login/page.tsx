@@ -21,7 +21,7 @@ export default function LoginPage() {
     }
 
     // login deu certo, redireciona
-    router.push('/dashboard')
+    router.push('/mural')
   }
 
   // expõe a função no escopo global, pois o Google chama ela via callback
