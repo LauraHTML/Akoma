@@ -45,7 +45,7 @@ export default async function MuralPage() {
           <div key={post.id} className="p-4 rounded shadow">
             <h3 className="font-bold">{post.title}</h3>
             <p className="mt-2 text-sm">{post.content}</p>
-            <span className="text-xs text-gray-500 block mt-4">Por: {post.users?.name}</span>
+            <span className="text-xs text-gray-500 block mt-4">Por: {post.profiles?.full_name}</span>
 
             {/* DELETE: Formulário compacto disparando a exclusão */}
             <form action={deletePost.bind(null, post.id)} className="mt-2">
