@@ -7,12 +7,10 @@ export default async function MuralPage() {
   // READ: Busca direto no banco durante a renderização no servidor
   const { data: posts, error } = await supabase
     .from('posts')
-  .select('*, profiles!posts_author_id_fkey(full_name)')
-  .order('created_at', { ascending: false })
+    .select('*, profiles!posts_author_id_fkey(full_name)')
+    .order('created_at', { ascending: false })
 
-    console.log('conteudo: ', posts);
-    console.log('Erro do Supabase:', error)
-    console.log('Conteudo:', posts)
+    console.log(error)
 
   return (
     <main className="p-8 bg-amber-100 min-h-screen">

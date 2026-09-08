@@ -10,7 +10,6 @@ export async function createPost(formData: FormData) {
     
     const title = formData.get('title') as string
     const content = formData.get('content') as string
-    const color = formData.get('color') as string
 
     // Pega o usuário logado atualmente
     const { data: { user } } = await supabase.auth.getUser()
